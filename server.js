@@ -22,7 +22,7 @@ app.use(express.static('website'));
 
 
 app.get('/getWeather', (req, res) => {
-    res.send(projectData); 
+    res.send(projectData[projectData.length  -1]); 
 })
 
 app.post('/postWeather', (req, res) => {
@@ -32,7 +32,7 @@ app.post('/postWeather', (req, res) => {
         content: req.body.content,
     }
     projectData.push(save);
-    res.send(projectData[projectData.legth-1]); 
+    res.send(projectData); 
 })
 
 const server = app.listen(port, listening);

@@ -27,28 +27,42 @@ async function weatherData(){
         await fetch ("/postWeather",{
             method: "POST",
             credentials: "same-origin",
+            headers:{
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify({
                 date: newDate,
                 temp: temp,
-                feelings: feeling})
+                content: feeling})
             
             })  
-         // get metod
-         const response = await fetch ("/getWeather",{
-            method: "GET",
-            credentials: "same-origin",
-        })
-        const update = await response.json();
-        // update UI 
-        document.getElementById("date").innerHTML = 'Date: ' + date; 
-        document.getElementById("temp").innerHTML = 'Temp: ' + temp;
-        document.getElementById("content").innerHTML = 'Feeling: ' + feeling;
-    }
+        }
     
      catch(error) {
      console.log("error", error);
     }
 }
 
+// update user's data and show in ui
+const updateUI = async () => {
+    // get metod
+    const response = await fetch ("/getWeather",{
+        method: "GET",
+        credentials: "same-origin",
+    })
+    const update = await response.json();
+    // update UI 
+    document.getElementById("date").innerHTML = 'Date: ' + newDate; 
+    document.getElementById("temp").innerHTML = 'Temp: ' + update.temp;
+    document.getElementById("content").innerHTML = 'Feeling: ' + update.content;
+    } 
+
 // call the weatherData when clicked the generate button
-document.getElementById('generate').addEventListener('click', weatherData);
+document.getElementById('generate').addEventListener('click', start);
+
+function start(){
+    weatherData()
+    .then(function(){
+        updateUI()
+    })
+}

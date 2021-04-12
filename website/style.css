@@ -1,5 +1,5 @@
 body{
-    background: #fffff8;
+    background: #fcf9f9;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -9,7 +9,7 @@ body{
     /* grid-template-columns:  */
     height:100vh;
     background: #9f49b4;
-    color: #f7f5ef;
+    color: #f3f0ed;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
@@ -17,45 +17,58 @@ body{
 }
 
 .holder{
-    color: #f7f5ef;
-    
+    color: #fdfbfb;
 }
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    position: absolute;
+    height: 180px;
+    width: 320px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    left: 350px;
+    top: 650px;
+
 }
 
 #entryHolder{
-    color: #f7f5ef;
-    height: 49px;
-    width: 320px;
-}
+    color: #1e9aca;
 
+}
 #date{
 
-    color: #f7f5ef;
-    height: 50px;
+    color: #69064b;
+    height: 55px;
     width: 320px;
-    font-size: x-small;
+    left: 350px;
+    top: 100px;
 }
 
 #temp{
-    color: #f7f5ef;
+    color: #69064b;
     height: 51px;
     width: 320px;
+    left: 100px;
+    
 }
 
 #content{
-    display:block;
-    height: 52px;
+    color: #69064b;
+    height: 55px;
     width: 320px;
+    left: 50px;
 }
 
 .headline {
-    color: #f7f5ef;
+    color: #50042e;
+    font-size: 50px;
+    left: 150;
 }
 .title{
-    color: #f7f5ef;
+    color: #fdfbfc;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -76,14 +89,13 @@ input{
 }
 
 button{
-    width: 400px;
+    width: 200px;
     height: 100px;
     background: #3b4a6b;
     color: #f0eddd;
     font-size: 26px;
     font-family:  'Times New Roman';
     border: none;
-    box-shadow: 2px 4px 5px #444;
 }
 h1{
     font-size: 36px;
@@ -91,7 +103,7 @@ h1{
 
 textarea{
     background:#22b2da;
-    color: #f0eddd;
+    color: #f1eaef;
     font-size: 20px;
     font-family:'Times New Roman';
 }
@@ -104,7 +116,7 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0eddd; 
+    color: #f7f0f0; 
     font-family:'Times New Roman';
 
 } 
