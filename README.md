@@ -14,8 +14,8 @@ To implement and use this project, you should install some packages:
 
 ## Steps
 
-1- Enter valid zip code (i.e. 12345 or 10001).
-2- Enter your feelings.
-3- click "Generate" button.
+1- Enter valid zip code (i.e. 12345 or 10001). <br>
+2- Enter your feelings.<br>
+3- click "Generate" button.<br>
 
 
